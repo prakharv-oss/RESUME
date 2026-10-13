@@ -1,0 +1,182 @@
+
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #eef2f6;
+    color: #303943;
+    line-height: 1.45;
+    padding: 30px 15px;
+}
+
+/* Main resume paper */
+.resume {
+    max-width: 850px;
+    min-height: 1100px;
+    margin: auto;
+    padding: 35px 32px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 25px rgba(20, 40, 60, 0.12);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #168a91;
+    margin-bottom: 18px;
+}
+
+.header h1 {
+    color: #17324d;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+
+.subtitle {
+    color: #168a91;
+    font-size: 14px;
+    margin: 4px 0 8px;
+    font-weight: 500;
+}
+
+.contact {
+    font-size: 11.5px;
+    color: #5d6b78;
+    margin-top: 3px;
+    overflow-wrap: anywhere;
+}
+
+.contact span {
+    padding: 0 5px;
+    color: #9aa5af;
+}
+
+/* Links */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #168a91;
+    text-decoration: underline;
+}
+
+/* Resume sections */
+.section {
+    margin-bottom: 17px;
+}
+
+.section h2 {
+    font-size: 15px;
+    color: #17324d;
+    font-weight: 800;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #d9e2ea;
+    letter-spacing: 0.3px;
+}
+
+.section p {
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+.section strong {
+    font-weight: 700;
+    color: #303943;
+}
+
+.muted {
+    color: #697783;
+}
+
+ul {
+    padding-left: 19px;
+    margin-top: 4px;
+}
+
+li {
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0;
+        background-color: white;
+    }
+
+    .resume {
+        width: 100%;
+        min-height: auto;
+        padding: 25px 20px;
+        box-shadow: none;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+    .contact {
+        font-size: 10px;
+        line-height: 1.7;
+    }
+
+    .section h2 {
+        font-size: 14px;
+    }
+
+    .section p,
+    li {
+        font-size: 11.5px;
+    }
+}
+
+/* A4 print and PDF */
+@page {
+    size: A4;
+    margin: 12mm;
+}
+
+@media print {
+    body {
+        padding: 0;
+        background: white;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .resume {
+        width: 100%;
+        max-width: none;
+        min-height: 0;
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .section {
+        margin-bottom: 12px;
+        break-inside: avoid;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
